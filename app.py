@@ -32,9 +32,9 @@ def create_fee_certificate(
 
     # Select letterhead
     if letterhead_option == "Just Kids":
-        letterhead_path = "assets/justkids.png"
+        letterhead_path = "justkids.png"
     else:
-        letterhead_path = "assets/jkpublic.png"
+        letterhead_path = "jkpublic.png"
 
     # Draw letterhead background
     try:
@@ -103,7 +103,7 @@ def create_fee_certificate(
     name_y = sig_y - 15
 
     try:
-        signature = ImageReader("assets/Dimple Agarwal.png")
+        signature = ImageReader("Dimple Agarwal.png")
         c.drawImage(signature, right_margin - 150, sig_y, width=130, height=50, mask="auto")
     except Exception as e:
         st.warning(f"Signature missing: {e}")
